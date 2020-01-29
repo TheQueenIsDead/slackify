@@ -1,0 +1,13 @@
+{
+  "name": "Slackify",
+  "version": "1.0.0",
+  "description": "This entire rpoject is a security vulnerability",
+  "author": "TheQueenIsDead",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.16.1"
+  }
+}

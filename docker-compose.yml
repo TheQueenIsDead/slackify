@@ -1,0 +1,24 @@
+version: '3.6'
+
+services:
+
+  # A wrapper for the core slackify module
+  slackify-core:
+    build:
+      context: .
+    image: slackify-core:${VERSION}
+    depends_on: slackify-core
+
+  # A functional containerised slackify for CLI nerds
+  slackify-cli:
+    build:
+      context: .
+    image: slackify:${VERSION}
+    depends_on: slackify-core
+
+  # A ui web wrapper for slackify for rookie computer users
+  slackify-ui:
+    build:
+      context: .
+    image: slackify-ui:${VERSION}
+    depends_on: slackify-core
